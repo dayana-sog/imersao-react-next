@@ -7,7 +7,10 @@ const Widget = styled.div`
   background-color: ${({ theme }) => {
     return theme.colors.mainBg;
   }};
-  border-radius: 4px;
+  
+  box-shadow:  7px 7px 14px #140c14,
+             -7px -7px 14px #503250;
+  border-radius: 50px;
   overflow: hidden;
   h1, h2, h3 {
     font-size: 16px;
@@ -24,7 +27,7 @@ const Widget = styled.div`
 
 Widget.Header = styled.header`
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   padding: 18px 32px;
   background-color: ${({ theme }) => theme.colors.primary};

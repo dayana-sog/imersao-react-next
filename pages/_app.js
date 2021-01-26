@@ -1,5 +1,10 @@
+import React, { useState } from 'react';
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
-import db from '../db.json';
+
+import usePersistedState from '../src/utils/usePersitedState';
+
+import light from '../src/styles/themes/light';
+import dark from '../src/styles/themes/dark';
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -25,14 +30,18 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 
-const theme = db.theme;
-
 export default function App({ Component, pageProps }) {
+  const [theme, setTheme] = useState(light);
+
+  const ToggleTheme = () => {
+    setTheme(theme.title === 'light'? dark : light);
+  };
+
   return (
     <>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
-        <Component {...pageProps} />
+        <Component ToggleTheme={ToggleTheme} {...pageProps} />
       </ThemeProvider>
     </>
   )

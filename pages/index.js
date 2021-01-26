@@ -1,10 +1,17 @@
-import styled from 'styled-components';
+import React, { useContext } from 'react';
+import styled, { ThemeContext } from 'styled-components';
 import db from '../db.json';
-import Widget from '../src/components/Widget';
-import QuizLogo from '../src/components/QuizLogo';
-import QuizBackground from '../src/components/QuizBackground';
-import Footer from '../src/components/Footer';
-import GitHubCorner from '../src/components/GitHubCorner';
+import {
+  Footer,
+  GitHubCorner,
+  HeadTheme,
+  QuizBackground,
+  QuizLogo,
+  Widget
+} from '../src/components';
+
+import { Switch } from '@material-ui/core';
+import { FiSun, FiMoon } from 'react-icons/Fi'
 
 export const QuizContainer = styled.div`
   width: 100%;
@@ -17,14 +24,35 @@ export const QuizContainer = styled.div`
   }
 `;
 
-export default function Home() {
+export default function Home({ ToggleTheme }) {
+  const { colors, title } = useContext(ThemeContext);
+
   return (
-    <QuizBackground backgroundImage={db.bg}>
+    <QuizBackground>
+
       <QuizContainer>
         <QuizLogo />
         <Widget>
           <Widget.Header>
             <h1>{db.title}</h1>
+            <HeadTheme>
+              <Switch
+                onChange={ToggleTheme}
+                checked={title === 'light'}
+                icon={
+                  <FiSun
+                    color="#fff"
+                    size={20}
+                  />
+                }
+                checkedIcon={
+                  <FiMoon
+                    color="#fff"
+                    size={20}
+                  />
+                } 
+              />
+            </HeadTheme>
           </Widget.Header>
           <Widget.Content>
             <p>{db.description}</p>
