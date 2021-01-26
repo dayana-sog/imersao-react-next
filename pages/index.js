@@ -11,7 +11,7 @@ import {
 } from '../src/components';
 
 import { Switch } from '@material-ui/core';
-import { FiSun, FiMoon } from 'react-icons/Fi'
+import { FiSun, FiMoon } from 'react-icons/fi'
 
 export const QuizContainer = styled.div`
   width: 100%;
