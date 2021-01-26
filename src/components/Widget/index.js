@@ -48,8 +48,13 @@ const Widget = styled.div`
     border-radius: .2rem;
     transition: all .2s;
     cursor: pointer;
+
+    &:disabled {
+      cursor: no-drop;
+    }
+
     &:hover {
-      background: #c1c1c1;
+      background: #c1c;
     }
   } 
 `;
