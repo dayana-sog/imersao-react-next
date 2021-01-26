@@ -6,9 +6,8 @@ function usePersistedState(key, initialState) {
 
     if (storageValue) {
       return JSON.parse(storageValue);
-    } else {
-      return initialState;
     }
+    return initialState;
   });
 
   useEffect(() => {
@@ -16,6 +15,6 @@ function usePersistedState(key, initialState) {
   }, [key, state]);
 
   return [state, setState];
-};
+}
 
 export default usePersistedState;

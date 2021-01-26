@@ -5,7 +5,7 @@ import harleyLight from '../../../assets/harley-light.jpg';
 const QuizBackground = styled.div`
   background-size: cover;
   background-position: center;
-  background: url(${(props) => props.theme.title === 'light'? harleyLight : harleyDark});
+  background: url(${(props) => (props.theme.title === 'light' ? harleyLight : harleyDark)});
   background-color: ${({ theme }) => theme.colors.mainBg};
   flex: 1;
 
@@ -16,7 +16,7 @@ const QuizBackground = styled.div`
       object-fit: cover;
       background-size: cover;
       background-position: center;
-      background: url(${(props) => props.theme.title === 'light'? harleyLight : harleyDark});
+      background: url(${(props) => (props.theme.title === 'light' ? harleyLight : harleyDark)});
       display: block;
       width: 100%;
       height: 210px;

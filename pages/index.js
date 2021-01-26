@@ -1,5 +1,11 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import styled, { ThemeContext } from 'styled-components';
+import Head from 'next/head';
+import { Switch } from '@material-ui/core';
+import { FiSun, FiMoon } from 'react-icons/fi';
+
+import { useRouter } from 'next/router';
+
 import db from '../db.json';
 import {
   Footer,
@@ -7,11 +13,10 @@ import {
   HeadTheme,
   QuizBackground,
   QuizLogo,
-  Widget
+  Widget,
 } from '../src/components';
 
-import { Switch } from '@material-ui/core';
-import { FiSun, FiMoon } from 'react-icons/fi'
+import imageFavIcon from '../assets/trophy.png';
 
 export const QuizContainer = styled.div`
   width: 100%;
@@ -24,11 +29,29 @@ export const QuizContainer = styled.div`
   }
 `;
 
+// eslint-disable-next-line react/prop-types
 export default function Home({ ToggleTheme }) {
-  const { colors, title } = useContext(ThemeContext);
+  const { title } = useContext(ThemeContext);
+  const [user, setUser] = useState('');
+
+  const router = useRouter();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    router.push(`/quiz?name=${user}`);
+  };
 
   return (
     <QuizBackground>
+      <Head>
+        <title>Imersão ReactJS - NextJS</title>
+        <link
+          rel="icon"
+          type="image/png"
+          href={imageFavIcon}
+        />
+      </Head>
 
       <QuizContainer>
         <QuizLogo />
@@ -39,23 +62,36 @@ export default function Home({ ToggleTheme }) {
               <Switch
                 onChange={ToggleTheme}
                 checked={title === 'light'}
-                icon={
+                icon={(
                   <FiSun
                     color="#fff"
                     size={20}
                   />
-                }
-                checkedIcon={
+                )}
+                checkedIcon={(
                   <FiMoon
                     color="#fff"
                     size={20}
                   />
-                } 
+                )}
               />
             </HeadTheme>
           </Widget.Header>
           <Widget.Content>
-            <p>{db.description}</p>
+            <form onSubmit={handleSubmit}>
+              <input
+                type="text"
+                placeholder="Seu nome"
+                onChange={(e) => setUser(e.target.value)}
+              />
+
+              <button type="submit" disabled={!user}>
+                Jogar
+                {' '}
+                {user}
+              </button>
+
+            </form>
           </Widget.Content>
         </Widget>
 

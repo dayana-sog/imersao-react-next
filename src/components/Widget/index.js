@@ -1,12 +1,10 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const Widget = styled.div`
   margin-top: 24px;
   margin-bottom: 24px;
   border: 1px solid ${({ theme }) => theme.colors.primary};
-  background-color: ${({ theme }) => {
-    return theme.colors.mainBg;
-  }};
+  background-color: ${({ theme }) => theme.colors.mainBg};
   box-shadow:  7px 7px 14px #140c14,
              -7px -7px 14px #503250;
   border-radius: 20px;
@@ -22,6 +20,38 @@ const Widget = styled.div`
     font-weight: 400;
     line-height: 1;
   }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    margin-top: -2rem;
+    padding: 2rem;
+  }
+  form input {
+    padding: 12px;
+    color: #fff;
+    border: 1px solid rgba(255,255,255, .1);
+    border-radius: .2rem;
+    margin-bottom: 2rem;
+    background: transparent;
+    &::placeholder{
+      color: rgba(255,255,255, .4);
+    }
+  }
+  button {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #FFF;
+    padding: .6rem;
+    background: #ccc;
+    border: none;
+    border-radius: .2rem;
+    transition: all .2s;
+    cursor: pointer;
+    &:hover {
+      background: #c1c1c1;
+    }
+  } 
 `;
 
 Widget.Header = styled.header`
