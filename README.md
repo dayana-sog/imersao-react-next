@@ -1,78 +1,61 @@
-# Example app with styled-components
 
-This example features how you use a different styling solution than [styled-jsx](https://github.com/zeit/styled-jsx) that also supports universal styles. That means we can serve the required styles for the first render within the HTML and then load the rest in the client. In this case we are using [styled-components](https://github.com/styled-components/styled-components).
 
-For this purpose we are extending the `<Document />` and injecting the server side rendered styles into the `<head>`, and also adding the `babel-plugin-styled-components` (which is required for server side rendering). Additionally we set up a global [theme](https://www.styled-components.com/docs/advanced#theming) for styled-components using NextJS custom [`<App>`](https://nextjs.org/docs/advanced-features/custom-app) component.
+# <p align="center">🏆 Imersão ReactJS - NextJS</p> 
+<p align="center">
+<img src="https://img.shields.io/badge/reactjs-16.8.0-blue" />
+<img src="https://img.shields.io/badge/Styles--component-5.0.0-pink"/>
+<img src="https://img.shields.io/badge/nextjs-v10-black" />
+<img src="https://img.shields.io/badge/vercel-passing-green" />
+</p>
 
-## Deploy your own
+Teste Aplicação:  <a href="https://imersao-react-next.dayana-sog.vercel.app/">Github User Search</a>
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+Aplicação criada com intuito por em prática os estudos REACTJS e NEXTJS.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-styled-components&project-name=with-styled-components&repository-name=with-styled-components)
+Aplicativo de exemplo com componentes estilizados
+Este exemplo mostra como você usa uma solução de estilo diferente de styled-jsx que também oferece suporte a estilos universais. Isso significa que podemos servir os estilos necessários para a primeira renderização no HTML e depois carregar o resto no cliente. Neste caso, estamos usando componentes estilizados.
+	
 
-## How to use
+---
+**Tela da aplicação**:
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+![alura](https://user-images.githubusercontent.com/57035171/106063222-bf6d6580-60ef-11eb-87d2-21b221dbaa99.gif)
 
-```bash
-npx create-next-app --example with-styled-components with-styled-components-app
-# or
-yarn create next-app --example with-styled-components with-styled-components-app
+## :computer:  Tecnologias / Ferramentas Utilizadas:
+-   [NextJS](https://nextjs.org/docs/getting-started)
+-   [ReactJS](https://pt-br.reactjs.org/)
+-   [Styled Component](https://styled-components.com/)
+-   [Lottie React Web](https://www.npmjs.com/package/lottie-react-web)
+-   [React Icons](https://react-icons.github.io/react-icons/)
+-   [Vercel](https://vercel.com/)
+	
+## :books: Instalação:
+
+Clone o repositório:
+```sh
+$ git clone https://github.com/dayana-sog/imersao-react-next
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
-
-### Try it on CodeSandbox
-
-[Open this example on CodeSandbox](https://codesandbox.io/s/github/vercel/next.js/tree/canary/examples/with-styled-components)
-
-### Notes
-
-When wrapping a [Link](https://nextjs.org/docs/api-reference/next/link) from `next/link` within a styled-component, the [as](https://styled-components.com/docs/api#as-polymorphic-prop) prop provided by `styled` will collide with the Link's `as` prop and cause styled-components to throw an `Invalid tag` error. To avoid this, you can either use the recommended [forwardedAs](https://styled-components.com/docs/api#forwardedas-prop) prop from styled-components or use a different named prop to pass to a `styled` Link.
-
-<details>
-<summary>Click to expand workaround example</summary>
-<br />
-
-**components/StyledLink.js**
-
-```javascript
-import Link from 'next/link'
-import styled from 'styled-components'
-
-const StyledLink = ({ as, children, className, href }) => (
-  <Link href={href} as={as} passHref>
-    <a className={className}>{children}</a>
-  </Link>
-)
-
-export default styled(StyledLink)`
-  color: #0075e0;
-  text-decoration: none;
-  transition: all 0.2s ease-in-out;
-
-  &:hover {
-    color: #40a9ff;
-  }
-
-  &:focus {
-    color: #40a9ff;
-    outline: none;
-    border: 0;
-  }
-`
+Aceda a pasta do projeto:
+```sh
+$ cd imersao-react-next
+```
+Instale as dependências:
+```sh
+$ yarn
+```
+Inicie o servidor:
+```sh
+$ yarn start
 ```
 
-**pages/index.js**
 
-```javascript
-import StyledLink from '../components/StyledLink'
+## 🚀 Deployment: 
+https://vercel.com/
 
-export default () => (
-  <StyledLink href="/post/[pid]" forwardedAs="/post/abc">
-    First post
-  </StyledLink>
-)
-```
 
-</details>
+## 📝  Licença:
+
+Esse projeto está sob a licença MIT. Veja o arquivo  [LICENSE](https://github.com/dayana-sog/imersao-react-next/blob/master/LICENSE) para mais detalhes.
+___
+Feito com ♥ by Dayana Gonçalves  👋 
