@@ -62,6 +62,8 @@ export default function App({ Component, pageProps }) {
           type="image/png"
           href={imageFavIcon}
         />
+        <meta name="title" content="Quiz desenvolvedor front-end:" />
+        <meta name="description" content="Teste seus conhecimentos de desenvolvimento front-end. Questões sobre ReactJS, HTML5, CSS3 e JavaScript" />
       </Head>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
