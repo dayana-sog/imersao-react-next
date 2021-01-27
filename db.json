@@ -1,28 +1,40 @@
 {
   "bg": "https://i2.wp.com/css-tricks.com/wp-content/uploads/2017/06/css-is-awesome-scaled.jpg?resize=1536%2C1208&ssl=1",
   "title": "Quiz desenvolvedor front-end:",
-  "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
+  "description": "Testes sobre o mundo de desenvolvimento front-end...",
   "questions": [
     {
       "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-      "title": "Como fazer um seletor por id via CSS?",
-      "description": "Essa é pra aquecer",
-      "answer": 2,
+      "title": "Quando o ReactJS foi lançado?",
+      "description": "Faz tempo, hein!?! haha",
+      "answer": 4,
       "alternatives": [
-        ".elemento",
-        "*elemento",
-        "#elemento",
-        "%elemento"
+        "Junho 2016",
+        "Janeiro 2009",
+        "Setembro 2012",
+        "Março 2013"
       ]
     },
     {
       "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-      "title": "Como fazer um background gradiente com css?",
-      "description": "Faz tempo em haha",
-      "answer": 0,
+      "title": "Quem foram os criadores do React?",
+      "description": "Essa é fácil, vai...",
+      "answer": 4,
       "alternatives": [
-         "background: linear-gradient(#e66465, #9198e5);",
-         "background: gradient(#e66465, #9198e5);"
+         "Twetter",
+         "Orkut",
+         "Instagram",
+         "Facebook"
+      ]
+    },
+    {
+      "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
+      "title": "Existe alguma diferença entre um 'componente' e um 'elemento'?",
+      "description": "Pensa, Pensa...",
+      "answer": 1,
+      "alternatives": [
+         "Sim. Um componente no React aceita entrada e retorna o elemento, que é simplesmente uma descrição do que você pode ver na tela do seu computador.",
+         "Não. Os dois são funções que são reinderizadas em tela."
       ]
     }
   ],

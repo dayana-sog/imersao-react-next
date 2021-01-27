@@ -27,6 +27,7 @@ const Widget = styled.div`
     margin-top: -2rem;
     padding: 2rem;
   }
+  
   form input {
     padding: 12px;
 
@@ -131,6 +132,15 @@ Widget.Topic = styled.a`
   &:hover,
   &:focus {
     opacity: .5;
+  }
+
+  input[type="radio"]:checked+label {
+    color: ${(props) => (props.theme.title === 'dark' ? '#ffafcc' : '#180f4b')} !important;
+  }
+
+  input[type="radio"]{
+    margin: 0;
+    display: none;
   }
 `;
 

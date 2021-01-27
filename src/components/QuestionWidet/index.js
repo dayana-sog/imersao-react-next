@@ -45,15 +45,15 @@ const QuestionWidget = ({
             return (
               <Widget.Topic
                 as="label"
-                htmlFor={alternativeId}
                 key={alternative}
+                className="label__wrapper"
               >
                 <input
                   id={alternativeId}
                   name={questionId}
                   type="radio"
                 />
-                {alternative}
+                <label htmlFor={alternativeId}>{alternative}</label>
               </Widget.Topic>
             );
           })}
