@@ -74,7 +74,7 @@ export default function App({ Component, pageProps }) {
         <meta property="og:url" content="https://imersao-react-next.dayana-sog.vercel.app/" />
         <meta property="og:title" content="Quiz desenvolvedor front-end:" />
         <meta property="og:description" content="Teste seus conhecimentos de desenvolvimento front-end. Questões sobre ReactJS, HTML5, CSS3 e JavaScript" />
-        <meta property="og:image" content="" />
+        <meta property="og:image" content="https://raw.githubusercontent.com/dayana-sog/imersao-react-next/master/assets/screen.png" />
 
       </Head>
       <ThemeProvider theme={theme}>
