@@ -56,7 +56,6 @@ export default function App({ Component, pageProps }) {
       <Head>
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
-        <title>Imersão ReactJS - NextJS</title>
         <link
           rel="icon"
           type="image/png"
@@ -64,6 +63,19 @@ export default function App({ Component, pageProps }) {
         />
         <meta name="title" content="Quiz desenvolvedor front-end:" />
         <meta name="description" content="Teste seus conhecimentos de desenvolvimento front-end. Questões sobre ReactJS, HTML5, CSS3 e JavaScript" />
+
+        {/* <!-- Primary Meta Tags --> */}
+        <title>Imersão ReactJS - NextJS</title>
+        <meta name="title" content="Quiz desenvolvedor front-end:" />
+        <meta name="description" content="Teste seus conhecimentos de desenvolvimento front-end. Questões sobre ReactJS, HTML5, CSS3 e JavaScript" />
+
+        {/* <!-- Open Graph / Facebook --> */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://imersao-react-next.dayana-sog.vercel.app/" />
+        <meta property="og:title" content="Quiz desenvolvedor front-end:" />
+        <meta property="og:description" content="Teste seus conhecimentos de desenvolvimento front-end. Questões sobre ReactJS, HTML5, CSS3 e JavaScript" />
+        <meta property="og:image" content="" />
+
       </Head>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
