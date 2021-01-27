@@ -3,6 +3,7 @@ import styled, { ThemeContext } from 'styled-components';
 import Head from 'next/head';
 import { Switch } from '@material-ui/core';
 import { FiSun, FiMoon } from 'react-icons/fi';
+import { toast } from 'react-toastify';
 
 import { useRouter } from 'next/router';
 
@@ -38,6 +39,10 @@ export default function Home({ ToggleTheme }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    toast.info(`Prepare a cachola ${user} para responder algumas perguntas...`, {
+      className: 'toast-init',
+    });
 
     router.push(`/quiz?name=${user}`);
   };
@@ -83,8 +88,10 @@ export default function Home({ ToggleTheme }) {
                 type="text"
                 placeholder="Seu nome"
                 onChange={(e) => setUser(e.target.value)}
+                value={user}
+                name="user"
+                required
               />
-
               <button type="submit" disabled={!user}>
                 Jogar
                 {' '}
@@ -99,7 +106,11 @@ export default function Home({ ToggleTheme }) {
           <Widget.Content>
             <h1>Quizes da Galera</h1>
 
-            <p>lorem ipsum dolor sit amet...</p>
+            <ul>
+              <li><a href="https://quiz-imersao-react.vercel.app">Data Science Quiz</a></li>
+              <li><a href="https://imersao-react-alura.malufell.vercel.app">How I Met Your Mother!</a></li>
+              <li><a href="https://quiz-padrao-projetos.thassya.vercel.app">Padrão de Projetos</a></li>
+            </ul>
           </Widget.Content>
         </Widget>
         <Footer />

@@ -8,12 +8,14 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.11.3",
+    "lottie-react-web": "^2.2.2",
     "next": "latest",
     "next-images": "^1.7.0",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
     "react-icons": "^4.1.0",
     "react-is": "^16.8.0",
+    "react-toastify": "^7.0.1",
     "styled-components": "^5.0.0",
     "url-loader": "^4.1.1"
   },

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 const Widget = styled.div`
   margin-top: 24px;
@@ -29,19 +29,31 @@ const Widget = styled.div`
   }
   form input {
     padding: 12px;
-    color: #fff;
-    border: 1px solid rgba(255,255,255, .1);
+
+    ${(props) => props.theme.title === 'dark' && css`
+      border: 1px solid rgba(255,255,255, 0.4);
+    `}
+
+    ${(props) => props.theme.title === 'light' && css`
+      border: 1px solid #4549555e;
+    `}
+
     border-radius: .2rem;
     margin-bottom: 2rem;
     background: transparent;
+
     &::placeholder{
-      color: rgba(255,255,255, .4);
+      color: ${(props) => (props.theme.title === 'dark' ? 'rgba(255,255,255, .6) ' : '#4549555e')} !important;
+    }
+
+    &:focus {
+      border: 1px solid '#b83891';
     }
   }
   button {
     font-size: 1.2rem;
     font-weight: 700;
-    color: #FFF;
+    color: #fff;
     padding: .6rem;
     background: #ccc;
     border: none;
@@ -54,7 +66,7 @@ const Widget = styled.div`
     }
 
     &:hover {
-      background: #c1c;
+      background: ${(props) => (props.theme.title === 'dark' ? '#b83891' : '#ffafcc')} !important;
     }
   } 
 `;
@@ -72,16 +84,53 @@ Widget.Header = styled.header`
 `;
 
 Widget.Content = styled.div`
+  color: ${(props) => (props.theme.title === 'dark' ? '#fff' : '#918b8b')};
   padding: 24px 32px 32px 32px;
+
   & > *:first-child {
     margin-top: 0;
   }
   & > *:last-child {
     margin-bottom: 0;
   }
+ 
   ul {
     list-style: none;
-    padding: 0;
+    padding-inline-start: 0px;
+     
+    li {
+      text-align: center;
+      margin-bottom: 8px;
+      padding: .2rem;
+      border-radius: 2px;
+      background: ${(props) => (props.theme.title === 'dark' ? '#b83891' : '#ffafcc')} !important;
+      
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    a {
+      text-decoration: none;
+      color: #F2F2F2;
+    }
+  }
+`;
+
+Widget.Topic = styled.a`
+  outline: 0;
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.contrastText};
+  background-color: ${({ theme }) => `${theme.colors.primary}`};
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  border-radius: ${({ theme }) => theme.borderRadius};
+  transition: .3s;
+  display: block;
+  
+  &:hover,
+  &:focus {
+    opacity: .5;
   }
 `;
 
