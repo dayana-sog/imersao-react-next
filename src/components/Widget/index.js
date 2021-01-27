@@ -30,13 +30,16 @@ const Widget = styled.div`
   
   form input {
     padding: 12px;
+    
 
     ${(props) => props.theme.title === 'dark' && css`
       border: 1px solid rgba(255,255,255, 0.4);
+      color: #fff;
     `}
 
     ${(props) => props.theme.title === 'light' && css`
       border: 1px solid #4549555e;
+      color: #333;
     `}
 
     border-radius: .2rem;
