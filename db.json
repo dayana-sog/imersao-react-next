@@ -1,42 +1,92 @@
 {
   "bg": "https://i2.wp.com/css-tricks.com/wp-content/uploads/2017/06/css-is-awesome-scaled.jpg?resize=1536%2C1208&ssl=1",
-  "title": "Quiz desenvolvedor front-end:",
-  "description": "Testes sobre o mundo de desenvolvimento front-end...",
+  "title": "Quiz mundo DC:",
+  "description": "Teste seus conhecimentos sobre o mundo DC...",
   "questions": [
+
+    
     {
-      "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-      "title": "Quando o ReactJS foi lançado?",
-      "description": "Faz tempo, hein!?! haha",
-      "answer": 3,
-      "alternatives": [
-        "Junho 2016",
-        "Janeiro 2009",
-        "Setembro 2012",
-        "Março 2013"
-      ]
-    },
-    {
-      "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-      "title": "Quem foram os criadores do React?",
-      "description": "Essa é fácil, vai...",
-      "answer": 3,
-      "alternatives": [
-         "Twetter",
-         "Orkut",
-         "Instagram",
-         "Facebook"
-      ]
-    },
-    {
-      "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-      "title": "Existe alguma diferença entre um 'componente' e um 'elemento'?",
-      "description": "Pensa, Pensa...",
+      "image": "https://media.giphy.com/media/xTiTnAhAX7AaNMORTa/giphy.gif",
+      "title": "De acordo com a DC Comics, qual destes personagens é considerado 'o maior super-herói do mundo'?",
+      "description": "Essa é fácil, hein!?! haha",
       "answer": 0,
       "alternatives": [
-         "Sim. Um componente no React aceita entrada e retorna o elemento, que é simplesmente uma descrição do que você pode ver na tela do seu computador.",
-         "Não. Os dois são funções que são reinderizadas em tela."
+        "Superman",
+        "Batman",
+        "Flash",
+        "Lanterna Verde"
+      ]
+    },
+    {
+      "image": "https://media.giphy.com/media/ZCl8R3zHwwiVBOVk88/giphy.gif",
+      "title": "O que a Arlequina era do coringa?",
+      "description": "E agora... não lembro...",
+      "answer": 3,
+      "alternatives": [
+         "Médica",
+         "Namorada",
+         "Empregada",
+         "Psicóloga"
+      ]
+    },
+    {
+      "image": "https://media.giphy.com/media/vTdcXyXVMGtS722OgX/giphy.gif",
+      "title": "Qual destes personagens da DC Comics, ainda não possui um filme?",
+      "description": "Será que você sabe essa...",
+      "answer": 3,
+      "alternatives": [
+         "Mulher-Maravilha",
+         "Superman",
+         "Batman",
+         "Nenhuma das respostas"
+      ]
+    },
+    {
+      "image": "https://media.giphy.com/media/BGF0gRQSQVQcg/giphy.gif",
+      "title": "Como a Harley Quinn chama o Coringa?",
+      "description": "Pensa, Pensa...",
+      "answer": 2,
+      "alternatives": [
+         "Amorzinho",
+         "Coringa",
+         "Pundinzinho",
+         "Palhacinho"
+      ]
+    },
+    {
+      "image": "https://media.giphy.com/media/eNxk0ILVQf3UCwdL4K/giphy.gif",
+      "title": "Quem é o Fundador da DC Comics?",
+      "description": "E agora... não lembro...",
+      "answer": 2,
+      "alternatives": [
+         "Jacon Banyr-Bergan",
+         "Micael Steffyn-Meglan",
+         "Malcolm Wheeler-Nicholson"
+      ]
+    },
+    {
+      "image": "https://media.giphy.com/media/eNxk0ILVQf3UCwdL4K/giphy.gif",
+      "title": "Quem é a RIVAL da DC Comics?",
+      "description": "Muito fácil...",
+      "answer": 2,
+      "alternatives": [
+         "The Walt Disney",
+         "Warner Bros",
+         "Marvel"
+      ]
+    },
+    {
+      "image": "https://media.giphy.com/media/oC0dO39ULoVhe/giphy.gif",
+      "title": "Qual é a fraqueza do superman?",
+      "description": "Muito fácil...",
+      "answer": 0,
+      "alternatives": [
+         "Kriptonita",
+         "Bomba atômica",
+         "Alta frequência de som"
       ]
     }
+
   ],
   "external": [
     "https://aluraquiz-coffee.leonardot07.vercel.app/"

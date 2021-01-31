@@ -8,7 +8,7 @@
 <img src="https://img.shields.io/badge/vercel-passing-green" />
 </p>
 
-Teste Aplicação:  <a href="https://imersao-react-next.dayana-sog.vercel.app/">Github User Search</a>
+Teste Aplicação:  <a href="https://imersao-react-next.dayana-sog.vercel.app/">Quiz DC Comics</a>
 
 Aplicação criada com intuito por em prática os estudos REACTJS e NEXTJS.
 
