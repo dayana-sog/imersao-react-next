@@ -81,8 +81,8 @@ const QuestionWidget = ({
           <button type="submit" disabled={selectedAlternative === undefined}>
             Confirmar
           </button>
-          {isCorrect && isQuestionSubmited && <p>Acertou!</p>}
-          {!isCorrect && isQuestionSubmited && <p>Errou!</p>}
+          {isCorrect && isQuestionSubmited}
+          {!isCorrect && isQuestionSubmited}
         </ALternativeForm>
       </Widget.Content>
     </Widget>

@@ -3,13 +3,23 @@
 /* eslint-disable no-return-assign */
 /* eslint-disable react/prop-types */
 import React from 'react';
+import { useRouter } from 'next/router';
+
 import Widget from '../Widget';
+import BackLinkArrow from '../BackLinkArrow';
 
 function ResultWidget({ results }) {
+  const router = useRouter();
+  const { name } = router.query;
+
   return (
     <Widget>
       <Widget.Header>
-        Carregando...
+        <BackLinkArrow href="/" />
+        Parabéns
+        {' '}
+        {name}
+        ! Seu resultado foi:
       </Widget.Header>
 
       <Widget.Content>

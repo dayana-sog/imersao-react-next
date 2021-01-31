@@ -6,6 +6,9 @@ import GitHubCorner from './GitHubCorner';
 import HeadTheme from './HeadTheme';
 import QuizContainer from './QuizContainer';
 import QuestionWidget from './QuestionWidet';
+import Link from './Link';
+import AlternativeForm from './AlternativeForm';
+import BackLinkArrow from './BackLinkArrow';
 
 export {
   Widget,
@@ -16,4 +19,7 @@ export {
   HeadTheme,
   QuizContainer,
   QuestionWidget,
+  Link,
+  AlternativeForm,
+  BackLinkArrow,
 };

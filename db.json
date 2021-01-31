@@ -39,6 +39,7 @@
     }
   ],
   "external": [
-    ""
+    "https://aluraquiz-coffee.leonardot07.vercel.app/"
+
   ]
 }
