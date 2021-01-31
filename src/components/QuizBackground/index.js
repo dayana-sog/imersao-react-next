@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import harleyDark from '../../../assets/suicide-squad.jpg';
-import harleyLight from '../../../assets/harley-light.jpg';
+import harleyDark from '../../../public/suicide-squad.jpg';
+import harleyLight from '../../../public/harley-light.jpg';
 
 const QuizBackground = styled.div`
   background-size: cover;
