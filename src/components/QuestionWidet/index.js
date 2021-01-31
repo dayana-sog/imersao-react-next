@@ -1,14 +1,21 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
+import React, { useState } from 'react';
 import Widget from '../Widget';
+import ALternativeForm from '../AlternativeForm';
 
 const QuestionWidget = ({
   question,
   questionIndex,
   totalQuestions,
   onSubmit,
+  addResult,
 }) => {
+  const [selectedAlternative, setSelectedAlternative] = useState(undefined);
+  const [isQuestionSubmited, setIsQuestionSubmited] = useState(false);
   const questionId = `question__${questionIndex}`;
+
+  const isCorrect = selectedAlternative === question.answer;
+
   return (
     <Widget>
       <Widget.Header>
@@ -34,34 +41,49 @@ const QuestionWidget = ({
           {question.description}
         </p>
 
-        <form
+        <ALternativeForm
           onSubmit={(infosDoEvento) => {
             infosDoEvento.preventDefault();
-            onSubmit();
+            setIsQuestionSubmited(true);
+
+            setTimeout(() => {
+              addResult(isCorrect);
+              onSubmit();
+              setIsQuestionSubmited(false);
+              setSelectedAlternative(undefined);
+            }, 1 * 2000);
           }}
         >
           {question.alternatives.map((alternative, alternativeIndex) => {
             const alternativeId = `alternative__${alternativeIndex}`;
+            const alternativeStatus = isCorrect ? 'SUCCESS' : 'ERROR';
+            const isSelected = selectedAlternative === alternativeIndex;
+
             return (
               <Widget.Topic
                 as="label"
                 key={alternative}
                 className="label__wrapper"
+                data-status={isQuestionSubmited && alternativeStatus}
+                data-selected={isSelected}
               >
                 <input
                   id={alternativeId}
                   name={questionId}
                   type="radio"
+                  onChange={() => setSelectedAlternative(alternativeIndex)}
                 />
                 <label htmlFor={alternativeId}>{alternative}</label>
               </Widget.Topic>
             );
           })}
 
-          <button type="submit">
+          <button type="submit" disabled={selectedAlternative === undefined}>
             Confirmar
           </button>
-        </form>
+          {isCorrect && isQuestionSubmited && <p>Acertou!</p>}
+          {!isCorrect && isQuestionSubmited && <p>Errou!</p>}
+        </ALternativeForm>
       </Widget.Content>
     </Widget>
   );

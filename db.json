@@ -7,7 +7,7 @@
       "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
       "title": "Quando o ReactJS foi lançado?",
       "description": "Faz tempo, hein!?! haha",
-      "answer": 4,
+      "answer": 3,
       "alternatives": [
         "Junho 2016",
         "Janeiro 2009",
@@ -19,7 +19,7 @@
       "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
       "title": "Quem foram os criadores do React?",
       "description": "Essa é fácil, vai...",
-      "answer": 4,
+      "answer": 3,
       "alternatives": [
          "Twetter",
          "Orkut",
@@ -31,7 +31,7 @@
       "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
       "title": "Existe alguma diferença entre um 'componente' e um 'elemento'?",
       "description": "Pensa, Pensa...",
-      "answer": 1,
+      "answer": 0,
       "alternatives": [
          "Sim. Um componente no React aceita entrada e retorna o elemento, que é simplesmente uma descrição do que você pode ver na tela do seu computador.",
          "Não. Os dois são funções que são reinderizadas em tela."

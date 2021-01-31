@@ -9,12 +9,14 @@ const Widget = styled.div`
              -7px -7px 14px #503250;
   border-radius: 20px;
   overflow: hidden;
+
   h1, h2, h3 {
     font-size: 16px;
     font-weight: 700;
     line-height: 1;
     margin-bottom: 0;
   }
+
   p {
     font-size: 14px;
     font-weight: 400;
@@ -30,8 +32,10 @@ const Widget = styled.div`
   
   form input {
     padding: 12px;
+    border-radius: .2rem;
+    margin-bottom: 2rem;
+    background: transparent;
     
-
     ${(props) => props.theme.title === 'dark' && css`
       border: 1px solid rgba(255,255,255, 0.4);
       color: #fff;
@@ -42,10 +46,6 @@ const Widget = styled.div`
       color: #333;
     `}
 
-    border-radius: .2rem;
-    margin-bottom: 2rem;
-    background: transparent;
-
     &::placeholder{
       color: ${(props) => (props.theme.title === 'dark' ? 'rgba(255,255,255, .6) ' : '#4549555e')} !important;
     }
@@ -53,6 +53,9 @@ const Widget = styled.div`
     &:focus {
       border: 1px solid '#b83891';
     }
+
+    
+
   }
   button {
     font-size: 1.2rem;
@@ -131,14 +134,14 @@ Widget.Topic = styled.a`
   border-radius: ${({ theme }) => theme.borderRadius};
   transition: .3s;
   display: block;
-  
+
   &:hover,
   &:focus {
     opacity: .5;
   }
 
   input[type="radio"]:checked+label {
-    color: ${(props) => (props.theme.title === 'dark' ? '#ffafcc' : '#180f4b')} !important;
+    color: #180f4b;
   }
 
   input[type="radio"]{

@@ -1,54 +1,15 @@
 /* eslint-disable react/prop-types */
-import React, { useState, useEffect, useContext } from 'react';
-import Lottie from 'lottie-react-web';
-import { ThemeContext } from 'styled-components';
+import React, { useState, useEffect } from 'react';
+import LoadingWidget from '../src/components/LoadingWidget';
+import ResultWidget from '../src/components/ResultWidget';
+
 import db from '../db.json';
 import {
   QuizBackground,
   QuizLogo,
-  Widget,
   QuizContainer,
   QuestionWidget,
 } from '../src/components';
-
-import loadLight from '../load-light.json';
-import loadDark from '../load-dark.json';
-
-function LoadingWidget() {
-  const { title } = useContext(ThemeContext);
-
-  return (
-    <Widget>
-      <Widget.Header>
-        Carregando...
-      </Widget.Header>
-
-      <Widget.Content>
-        {
-          title === 'light' ? (
-            <Lottie
-              width="100%"
-              options={{
-                animationData: loadLight,
-                loop: true,
-              }}
-            />
-          )
-            : (
-              <Lottie
-                width="100%"
-                options={{
-                  animationData: loadDark,
-                  loop: true,
-                }}
-              />
-            )
-        }
-
-      </Widget.Content>
-    </Widget>
-  );
-}
 
 const screenStates = {
   QUIZ: 'QUIZ',
@@ -57,10 +18,19 @@ const screenStates = {
 };
 export default function QuizPage() {
   const [screenState, setScreenState] = useState(screenStates.LOADING);
-  const totalQuestions = db.questions.length;
   const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [results, setResults] = useState([]);
+
+  const totalQuestions = db.questions.length;
   const questionIndex = currentQuestion;
   const question = db.questions[questionIndex];
+
+  function addResult(result) {
+    setResults([
+      ...results,
+      result,
+    ]);
+  }
 
   useEffect(() => {
     setTimeout(() => {
@@ -88,12 +58,13 @@ export default function QuizPage() {
             questionIndex={questionIndex}
             totalQuestions={totalQuestions}
             onSubmit={handleSubmitQuiz}
+            addResult={addResult}
           />
         )}
 
         {screenState === screenStates.LOADING && <LoadingWidget />}
 
-        {screenState === screenStates.RESULT && <div>Você acertou X questões, parabéns!</div>}
+        {screenState === screenStates.RESULT && <ResultWidget results={results} />}
       </QuizContainer>
     </QuizBackground>
   );
