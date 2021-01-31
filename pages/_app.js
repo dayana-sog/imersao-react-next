@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import Head from 'next/head';
 import { ToastContainer } from 'react-toastify';
-import imageFavIcon from '../assets/trophy.png';
+import imageFavIcon from '../public/trophy.png';
 
 // import usePersistedState from '../src/utils/usePersitedState';
 

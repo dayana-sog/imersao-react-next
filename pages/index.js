@@ -19,7 +19,7 @@ import {
   Link,
 } from '../src/components';
 
-import imageFavIcon from '../assets/trophy.png';
+import imageFavIcon from '../public/trophy.png';
 
 export const QuizContainer = styled.div`
   width: 100%;
